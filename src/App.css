@@ -1,0 +1,189 @@
+/* Page background with gradient */
+body{
+  margin:0;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background:linear-gradient(135deg,#667eea,#764ba2);
+  min-height:100vh;
+}
+
+/* Main container */
+.container{
+  max-width:800px;
+  margin:auto;
+  background:white;
+  padding:30px;
+  border-radius:15px;
+  box-shadow:0 10px 30px rgba(0,0,0,0.2);
+  animation:fadeIn 0.5s ease-in;
+}
+
+/* Title */
+h1{
+  text-align:center;
+  color:#4a4de6;
+  margin-bottom:20px;
+}
+
+/* Section title */
+h2{
+  text-align:center;
+  color:#444;
+  margin-bottom:15px;
+}
+
+/* Navigation bar */
+nav{
+  display:flex;
+  justify-content:center;
+  gap:20px;
+  margin-bottom:25px;
+}
+
+nav a{
+  text-decoration:none;
+  font-weight:600;
+  color:white;
+  background:linear-gradient(45deg,#ff7a18,#ffb347);
+  padding:8px 14px;
+  border-radius:8px;
+  transition:0.3s;
+}
+
+nav a:hover{
+  transform:scale(1.1);
+  box-shadow:0 4px 10px rgba(0,0,0,0.2);
+}
+
+/* Input field */
+input{
+  padding:10px;
+  width:65%;
+  border-radius:8px;
+  border:1px solid #ccc;
+  margin-right:10px;
+  font-size:14px;
+}
+
+/* Add button */
+button{
+  padding:9px 15px;
+  border:none;
+  border-radius:8px;
+  font-weight:600;
+  cursor:pointer;
+  background:linear-gradient(45deg,#42e695,#3bb2b8);
+  color:white;
+  transition:0.3s;
+}
+
+button:hover{
+  transform:scale(1.05);
+  box-shadow:0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* Task list */
+ul{
+  list-style:none;
+  padding:0;
+  margin-top:20px;
+}
+
+/* Task cards */
+li{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:12px 15px;
+  border-radius:10px;
+  margin-bottom:10px;
+  background:linear-gradient(120deg,#fdfbfb,#ebedee);
+  box-shadow:0 4px 10px rgba(0,0,0,0.1);
+  transition:0.3s;
+}
+
+li:hover{
+  transform:translateY(-3px);
+  box-shadow:0 6px 15px rgba(0,0,0,0.15);
+}
+
+/* Completed task */
+.completed{
+  text-decoration:line-through;
+  color:gray;
+}
+
+/* Delete button */
+li button{
+  background:linear-gradient(45deg,#ff416c,#ff4b2b);
+  padding:6px 10px;
+}
+
+/* Analytics container */
+.analytics-container{
+  display:flex;
+  justify-content:center;
+  margin-top:20px;
+}
+
+/* Chart card */
+.chart-box{
+  padding:20px;
+  border-radius:12px;
+  background:linear-gradient(120deg,#f6d365,#fda085);
+  box-shadow:0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* Stats text */
+.stats{
+  margin-top:20px;
+  text-align:center;
+  font-weight:600;
+}
+
+/* Task badges */
+.badge{
+  padding:3px 8px;
+  border-radius:6px;
+  font-size:12px;
+  color:white;
+}
+
+.badge-done{
+  background:#4caf50;
+}
+
+.badge-pending{
+  background:#ff9800;
+}
+
+/* Fade animation */
+@keyframes fadeIn{
+  from{
+    opacity:0;
+    transform:translateY(10px);
+  }
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
+}
+
+/* Responsive design */
+@media(max-width:600px){
+
+  .container{
+    margin:20px;
+    padding:20px;
+  }
+
+  input{
+    width:100%;
+    margin-bottom:10px;
+  }
+
+  nav{
+    flex-direction:column;
+    gap:10px;
+  }
+
+}
